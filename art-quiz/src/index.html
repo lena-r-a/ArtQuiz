@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link rel="icon" href="./assets/img/favicon.svg" type="image/x-icon"> 
+<title>Art-quiz</title>
+</head>
+<body>
+  <div id="root">
+
+    <div id="content">
+
+      <div class="home-page">
+        <div class="settins-ikon"></div>
+        <div class="home-page__content">
+          <img src="./assets/img/Group 1438.svg" alt="logo" class="home-page__content-img">
+          <button class="button btn_artist">Artist quiz</button>
+          <button class="button btn_picture">Pictures quiz</button>
+        </div>
+      </div>
+
+      <div class="category-page hidden">
+        <div class="category-page__header">
+          <img src="./assets/img/Group 1438.svg" alt="logo" class="category-page__logo">
+          <nav class="category-page__header-nav">
+            <ul class="header-nav__list">
+              <li class="header-nav__list-item header-home btn">Home</li>
+              <li class="header-nav__list-item active">Categories</li>
+            </ul>
+          </nav>
+        </div>
+        <div class="category-page__title">Categories</div>
+        <div class="category-page__container"></div>
+        <div class="category-page__footer footer-nav">
+          <div class="category-page__footer-home footer-links">
+            <img src="./assets/img/home.svg" alt="" class="footer-home-img">
+            <p class="footer-home_title">Home</p>
+          </div>
+          <div class="category-page__footer-categories footer-links">
+            <img src="./assets/img/categories.svg" alt="" class="footer-home-img">
+            <p class="footer-home_title active">Categories</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="settings-page hidden">
+        <div class="settings-page__header">
+          <div class="settings-page__back btn"></div>
+          <h2 class="settings-page__title">Settings</h2>
+        </div>
+        <div class="settings-page__content">
+          <div class="settings-page__volume settings-page__section">
+            <h3 class="settings-page__subtitle volume-title">Volume</h3>
+            <input type="range" value="45" class="volume-progress range" />
+            <div class="volume-buttons">
+              <button class="volume-off btn"></button>
+              <button class="volume-on btn"></button>
+            </div>
+          </div>
+          <div class="settings-page__timetoggle settings-page__section">
+            <h3 class="settings-page__subtitle">Time game</h3>
+            <div class="timetoggle-container">
+              <label for="toggle-button" class="toggle-text">Off</label>
+              <input type="checkbox" id="toggle-button" class="toggle-button">
+            </div>
+          </div>
+          <div class="settings-page__timeamount settings-page__section">
+            <h3 class="settings-page__subtitle volume-title">Time to answer</h3>
+            <div class="timeamount-container">
+              <button class="decrease-time time-btn btn" onclick="this.nextElementSibling.stepDown()">−</button>
+              <input
+                    class="game-duration"
+                    min="5"
+                    max="30"
+                    step="5"
+                    value="20"
+                    type="number"
+                    name="game-duration"
+                  />
+              <button class="increase-time time-btn btn" onclick="this.previousElementSibling.stepUp()">+</button>
+            </div>
+          </div>
+          <div class="settings-page__saving">
+            <button class="settings__default-btn button">Default</button>
+            <button class="settings__save-btn button">Save</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="questions-page hidden">
+        <div class="question-page__header">
+          <img src="./assets/img/Group 1438.svg" alt="logo" class="question-page__logo btn">
+          <div class="questions-page__timeline">
+            <input class="time-line range" value="100" type="range">
+            <span class="time-counter"></span>
+          </div>
+        </div>
+        
+        <p class="questions-page_question-artist"></p>
+        <div class="question-picture__container"></div>
+        <div class="questions-page_popup">
+          <div class="result_img"></div>
+          <div class="answer-picture"></div>
+          <p class="picture-name"></p>
+          <p class="autor_name"></p>
+          <p class="picture-year"> <span>year</span></p>
+          <button class="next button">Next</button>
+        </div>
+      </div>
+      
+      <div class="score-page hidden">
+        <div class="score-page__header">
+          <h2 class="score-page__title">Score</h2>
+          <nav class="category-page__header-nav">
+            <ul class="header-nav__list">
+              <li class="header-nav__list-item header-score_home btn">Home</li>
+              <li class="header-nav__list-item header-score_categ btn">Categories</li>
+            </ul>
+          </nav>
+        </div>
+        <div class="score-page__pictures"></div>
+        <div class="score-page__footer footer-nav">
+          <div class="score-page__footer-home footer-links">
+            <img src="./assets/img/home.svg" alt="" class="footer-home-img">
+            <p class="footer-home_title">Home</p>
+          </div>
+          <div class="score-page__footer-categories footer-links btn">
+            <img src="./assets/img/cat_score.svg" alt="" class="footer-home-img">
+            <p class="footer-home_title">Categories</p>
+          </div>
+          <div class="score-page__footer-score footer-links btn">
+            <img src="./assets/img/score_score.svg" alt="" class="footer-home-img">
+            <p class="footer-home_title active">Score</p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+    
+
+    <footer class="footer">
+      <a href="https://github.com/lena-r-a" class="github">GitHub</a>
+      <p>2021</p>
+      <a href="https://rs.school/js/" class="rs"><img src="https://rs.school/images/rs_school_js.svg" alt="logo" class="logo"></a>
+    </footer>
+  </div>
+</body>
+</html>

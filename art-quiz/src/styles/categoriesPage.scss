@@ -1,0 +1,130 @@
+.category-page {
+  width: 100%;
+  margin-bottom: 75px;
+  background-color: black;
+  display: none;
+  overflow: hidden;
+  // font-family: 'Source Code Pro', monospace;
+  .category-page__header {
+    padding:  10px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 70px;
+  }
+  .category-page__logo {
+    width: 166px;
+    height: 62px;
+  }
+  .category-page__title {
+    padding: 10px;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    
+  }
+}
+.header-nav__list{
+  display: flex;
+  width: 0px;
+
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+}
+.category-page__header-nav {
+  opacity: 0;
+  // width: 0;
+  height: 0;
+  transition: all 0.5s ease;
+}
+.footer-nav {
+  width: 100vw;
+  height: 75px;
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  border-top: 2px solid white;
+  border-radius: 20px 20px 0 0;
+  background-color: black;
+}
+.footer-links{
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px
+}
+.category-page__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 10px;
+  padding: 5px;
+  
+}
+.category-div {
+  width: 155px;
+  height: 164px;
+  background-position: center;
+  background-size: cover;
+  // opacity: 0.8;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-size: 2rem;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%); 
+  &:last-child{
+    margin-bottom: 75px;
+  }
+  &:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+  p {
+    font-size: 1.2rem;
+  }
+  p:hover {
+    cursor: pointer;
+    color: rgb(71, 136, 221);
+  }
+}
+.finishedGame {
+  filter: grayscale(0%);
+  -webkit-filter: grayscale(0%); 
+}
+@media screen and (min-width: 520px) and (max-width: 767px){
+  .category-page__footer {
+    visibility: hidden;
+    height: 0;
+    transition: all 0.5s ease;
+  }
+  .category-page__header-nav  {
+    opacity: 1;
+    height: 30px;
+  }
+  .header-nav__list {
+    width: 230px;
+  }
+}
+
+@media screen and (min-width: 768px){
+  .category-page__footer {
+    visibility: hidden;
+    height: 0;
+    transition: all 0.5s ease;
+  }
+  .category-page__header-nav  {
+    opacity: 1;
+    height: 30px;
+  }
+  .header-nav__list {
+    width: 230px;
+  }
+}
